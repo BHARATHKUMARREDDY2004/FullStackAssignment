@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html ng-app="taskManagerApp">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self' 'unsafe-inline' 'unsafe-eval' http://localhost:3000 http://127.0.0.1:3000 https://ajax.googleapis.com; connect-src 'self' http://localhost:3000 http://127.0.0.1:3000; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://ajax.googleapis.com; style-src 'self' 'unsafe-inline'">
+  <title>Task Manager</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="components/login/login.component.css">
+  <link rel="stylesheet" href="components/signup/signup.component.css">
+  <link rel="stylesheet" href="components/home/home.component.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular-route.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular-sanitize.min.js"></script>
+  <script src="app.js"></script>
+  <script src="components/login/login.component.js"></script>
+  <script src="components/signup/signup.component.js"></script>
+  <script src="components/home/home.component.js"></script>
+</head>
+<body>
+  <div ng-view></div>
+</body>
+</html>

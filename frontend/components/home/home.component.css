@@ -1,0 +1,354 @@
+:root {
+  --first-color: #081f37;
+  --second-color: #1e549f;
+  --third-color: #2e79ba;
+  --fourth-color: #5fc9f3;
+  --white: #ffffff;
+  --gray: #f8f9fa;
+  --green: #28a745;
+  --red: #dc3545;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  padding: 10px 0;
+}
+
+.header h2 {
+  color: var(--first-color);
+  margin: 0;
+}
+
+.header button {
+  background: var(--second-color);
+  color: white;
+  padding: 10px 20px;
+  font-weight: bold;
+  min-width: 100px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 40px 20px;
+  font-family: Arial, sans-serif;
+}
+
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.header h2 {
+  color: var(--first-color);
+}
+
+.header button {
+  background: var(--second-color);
+  color: white;
+}
+
+
+.card {
+  background: var(--white);
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  padding: 24px;
+  margin-bottom: 30px;
+}
+
+.card h3 {
+  color: var(--first-color);
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-size: 20px;
+}
+
+
+.form-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.form-group {
+  flex: 1 1 45%;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group.full-width {
+  flex: 1 1 100%;
+}
+
+label {
+  margin-bottom: 8px;
+  color: var(--first-color);
+  font-weight: 500;
+  font-size: 14px;
+  display: block;
+}
+
+input, textarea, select {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+button {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  background-color: var(--second-color);
+  color: white;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+button:hover {
+  background: var(--third-color);
+  transform: translateY(-1px);
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.primary-btn {
+  background: var(--third-color);
+  padding: 10px 20px;
+  font-size: 15px;
+}
+
+.reset-btn {
+  background: #6c757d;
+}
+
+.danger-btn {
+  background: var(--second-color);
+}
+
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.filters select {
+  padding: 8px;
+  border-radius: 6px;
+}
+
+.required-field {
+  color: var(--red);
+  margin-left: 3px;
+}
+
+.error-message {
+  background-color: rgba(220, 53, 69, 0.1);
+  color: var(--red);
+  padding: 10px;
+  border-radius: 4px;
+  margin-bottom: 15px;
+  border-left: 3px solid var(--red);
+}
+
+
+.task-card {
+  background: white;
+  padding: 20px;
+  margin-top: 15px;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  color: #333;
+  position: relative;
+  border-left: 4px solid transparent;
+  transition: all 0.2s ease-in-out;
+}
+
+
+.task-card.priority-high {
+  background-color: rgba(220, 53, 69, 0.08);
+  border-left-color: var(--red);
+}
+
+.task-card.priority-medium {
+  background-color: rgba(255, 193, 7, 0.08);
+  border-left-color: #ffc107;
+}
+
+.task-card.priority-low {
+  background-color: rgba(40, 167, 69, 0.08);
+  border-left-color: var(--green);
+}
+
+.task-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.status-label {
+  padding: 5px 12px;
+  border-radius: 16px;
+  font-size: 12px;
+  font-weight: bold;
+  color: white;
+  display: inline-block;
+}
+
+.status-label.completed {
+  background: var(--green);
+}
+
+.status-label.pending {
+  background: var(--red);
+}
+
+.task-card p {
+  margin: 8px 0;
+  color: #333;
+}
+
+.task-card p strong {
+  font-weight: bold;
+  color: var(--first-color);
+  display: inline-block;
+  min-width: 70px;
+}
+
+
+.priority-high .task-header h4 {
+  color: var(--red);
+}
+
+.priority-medium .task-header h4 {
+  color: #d97706; 
+}
+
+.priority-low .task-header h4 {
+  color: #059669;  
+}
+
+
+.priority-badge {
+  display: inline-block;
+  padding: 3px 8px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 600;
+  margin-left: 4px;
+}
+
+.priority-badge.high {
+  background-color: rgba(220, 53, 69, 0.2);
+  color: #b91c1c;
+}
+
+.priority-badge.medium {
+  background-color: rgba(255, 193, 7, 0.2);
+  color: #b45309;
+}
+
+.priority-badge.low {
+  background-color: rgba(40, 167, 69, 0.2);
+  color: #047857;
+}
+
+.task-actions {
+  margin-top: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.edit-mode {
+  max-width: 750px;
+  background: rgba(255, 255, 255, 0.95);
+  padding: 20px;
+  border-radius: 6px;
+  box-shadow: 0 0 0 1px rgba(0,0,0,0.05), 0 3px 6px rgba(0,0,0,0.1);
+  color: #333333;
+}
+
+.edit-mode .form-grid {
+  margin-top: 0;
+}
+
+.edit-mode .form-group label,
+.task-card .edit-mode label,
+.edit-label {
+  font-weight: 600 !important;
+  color: #081f37 !important; 
+  display: block !important;
+  margin-bottom: 8px !important;
+  font-size: 14px !important;
+  text-align: left !important;
+  width: 100% !important;
+}
+
+label.edit-label {
+  color: #081f37 !important; 
+  font-weight: 600 !important;
+  background: transparent !important;
+}
+
+.edit-error, .error-message {
+  background-color: rgba(220, 53, 69, 0.1);
+  color: var(--red);
+  padding: 10px;
+  border-radius: 4px;
+  margin-bottom: 15px;
+  border-left: 3px solid var(--red);
+  font-size: 14px;
+}
+
+/* Form validation styles */
+.validation-error {
+  color: var(--red);
+  font-size: 12px;
+  margin-top: 5px;
+  font-weight: 500;
+}
+
+input.ng-invalid.ng-dirty:not(.ng-pristine), 
+select.ng-invalid.ng-dirty:not(.ng-pristine),
+textarea.ng-invalid.ng-dirty:not(.ng-pristine) {
+  border: 1px solid var(--red);
+  background-color: rgba(220, 53, 69, 0.05);
+}
+
+button[disabled] {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+.task-edit-actions {
+  display: flex;
+  gap: 15px;
+  justify-content: flex-start;
+  margin-top: 20px;
+  flex-direction: row;
+  width: 100%;
+}
+
+.task-edit-actions button {
+  flex: 0 0 auto;
+  min-width: 100px;
+}
+
+.no-tasks p {
+  text-align: center;
+  color: #6c757d;
+  padding: 20px;
+  font-size: 16px;
+}
