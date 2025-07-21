@@ -293,4 +293,19 @@ angular.module('taskManagerApp')
           $scope.error = $sce.trustAsHtml('Logout failed');
         });
     };
+
+    $scope.deleteAccount = function() {
+      if (confirm('Are you sure you want to delete your account?')) {
+        AuthService.deleteAccount()
+          .then(function() {
+            AuthService.logout();
+            $location.path('/login');
+          })
+          .catch(function(error) {
+            if (error.status !== 401) {
+              $scope.error = $sce.trustAsHtml(error.data.message || 'Failed to delete account');
+            }
+          });
+      }
+    };
   }]);

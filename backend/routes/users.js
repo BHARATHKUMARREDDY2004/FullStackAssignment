@@ -13,6 +13,15 @@ router.post('/', validate(userSchema), async (req, res, next) => {
   }
 });
 
+router.get('/', async (req, res, next) => {
+  try {
+    const users = await UserService.getAllUsers();
+    res.json(users);
+  } catch (error) {
+    next(error);
+  }
+});
+
 router.get('/:id', authenticate, async (req, res, next) => {
   try {
     const user = await UserService.getUserById(req.params.id);

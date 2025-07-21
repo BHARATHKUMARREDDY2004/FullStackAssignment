@@ -44,6 +44,10 @@ angular.module('taskManagerApp', ['ngRoute', 'ngSanitize'])
           }]
         }
       })
+      .when('/admin', {
+        templateUrl: 'components/admin/admin.component.html',
+        controller: 'AdminController',
+      })
       .otherwise({
         redirectTo: '/login'
       });
@@ -110,8 +114,17 @@ angular.module('taskManagerApp', ['ngRoute', 'ngSanitize'])
       });
     };
 
+    this.deleteAccount = function() {
+      var self = this;
+      return $http.delete(API_URL + '/users/' + this.getCurrentUserId(), {
+        headers: { 'Authorization': 'Bearer ' + this.getToken() }
+      })
+    };
+
     this.register = function(user) {
-      return $http.post(API_URL + '/users', user);
+      return $http.post(API_URL + '/users', user, {
+        headers: { 'Content-Type': 'application/json' }
+      });
     };
 
     this.decodeToken = function() {

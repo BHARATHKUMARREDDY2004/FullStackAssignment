@@ -1,0 +1,24 @@
+<section class="admin-dashboard">
+  <h2>Users</h2>
+  <ul>
+    <li class="user-item">
+      <div class="user-card">
+        <h3>Name</h3>
+        <p>Email</p>
+        <p>
+            Status
+        </p>
+      </div>
+    </li>
+    <li ng-repeat="user in users" class="user-item">
+      <div class="user-card">
+        <h3>{{ user.name }}</h3>
+        <p>Email: {{ user.email }}</p>
+        <p>
+          <span ng-if="user.is_active" class="status active">Active</span>
+          <span ng-if="!user.is_active" class="status inactive">Inactive</span>
+        </p>
+      </div>
+    </li>
+  </ul>
+</section>

@@ -12,14 +12,18 @@ angular.module('taskManagerApp')
         return;
       }
 
+      console.log('Sending registration data:', $scope.user);
       AuthService.register($scope.user)
         .then(function(response) {
           $location.path('/login');
         })
         .catch(function(error) {
           var errorMessage = 'Registration failed. Please try again.';
+          console.log('Registration error:', error);
           if (error && error.data && error.data.message) {
             errorMessage = error.data.message;
+          } else if (error && error.data && error.data.errors) {
+            errorMessage = Array.isArray(error.data.errors) ? error.data.errors.join('<br>') : error.data.errors;
           } else if (error && error.statusText) {
             errorMessage = error.statusText;
           }

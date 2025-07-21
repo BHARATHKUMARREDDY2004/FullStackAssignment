@@ -1,0 +1,44 @@
+.admin-dashboard {
+  padding: 20px;
+  width: 80vw;
+}
+
+.admin-dashboard h2 {
+    text-align: center;
+    color: var(--first-color);
+}
+
+li {
+    list-style: none;
+    margin: 10px 0;
+}
+
+.user-card {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-around;
+    padding-left: 10px;
+    align-items: center;
+}
+
+.user-card h3{
+    width: 60%;
+}
+
+.user-card p {
+    width:40%;
+    margin: 0;
+}
+
+.admin-dashboard h3, p {
+    display: inline-block;
+    color: var(--first-color);
+}
+.status.active {
+  color: green;
+}
+
+.status.inactive {
+  color: red;
+}

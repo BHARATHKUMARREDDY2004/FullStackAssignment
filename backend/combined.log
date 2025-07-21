@@ -832,3 +832,99 @@
 {"level":"info","message":"User logged out: 3","timestamp":"2025-07-21T07:29:38.165Z"}
 {"level":"info","message":"User logged in: vemireddybharathreddy90@gmail.com","timestamp":"2025-07-21T07:29:41.472Z"}
 {"level":"info","message":"Retrieved user: 3","timestamp":"2025-07-21T07:29:41.575Z"}
+{"level":"info","message":"Server running on port 3000, worker 2276","timestamp":"2025-07-21T09:01:27.595Z"}
+{"level":"info","message":"Server running on port 3000, worker 15532","timestamp":"2025-07-21T09:02:28.340Z"}
+{"level":"info","message":"Retrieved all users","timestamp":"2025-07-21T09:03:13.247Z"}
+{"level":"info","message":"Retrieved all users","timestamp":"2025-07-21T09:12:58.344Z"}
+{"level":"info","message":"Retrieved all users","timestamp":"2025-07-21T09:17:13.709Z"}
+{"level":"info","message":"Retrieved all users","timestamp":"2025-07-21T09:17:19.011Z"}
+{"level":"info","message":"Retrieved all users","timestamp":"2025-07-21T09:17:21.440Z"}
+{"level":"info","message":"Retrieved all users","timestamp":"2025-07-21T09:21:53.214Z"}
+{"level":"info","message":"Retrieved all users","timestamp":"2025-07-21T09:21:54.057Z"}
+{"level":"info","message":"Retrieved all users","timestamp":"2025-07-21T09:21:56.313Z"}
+{"level":"info","message":"Retrieved all users","timestamp":"2025-07-21T09:22:02.349Z"}
+{"level":"info","message":"Retrieved all users","timestamp":"2025-07-21T09:22:21.548Z"}
+{"level":"info","message":"Retrieved all users","timestamp":"2025-07-21T09:24:46.156Z"}
+{"level":"info","message":"Retrieved all users","timestamp":"2025-07-21T09:24:49.144Z"}
+{"level":"info","message":"Retrieved all users","timestamp":"2025-07-21T09:24:52.776Z"}
+{"level":"info","message":"Retrieved all users","timestamp":"2025-07-21T09:28:19.029Z"}
+{"level":"info","message":"Retrieved all users","timestamp":"2025-07-21T09:28:23.001Z"}
+{"level":"info","message":"Retrieved all users","timestamp":"2025-07-21T09:28:29.422Z"}
+{"level":"info","message":"Retrieved all users","timestamp":"2025-07-21T09:28:36.514Z"}
+{"level":"info","message":"Retrieved all users","timestamp":"2025-07-21T09:28:40.376Z"}
+{"level":"info","message":"Retrieved all users","timestamp":"2025-07-21T09:28:55.488Z"}
+{"level":"info","message":"Retrieved all users","timestamp":"2025-07-21T09:28:57.153Z"}
+{"level":"info","message":"Retrieved all users","timestamp":"2025-07-21T09:28:59.212Z"}
+{"level":"info","message":"Retrieved all users","timestamp":"2025-07-21T09:29:00.306Z"}
+{"level":"info","message":"Retrieved all users","timestamp":"2025-07-21T09:29:14.220Z"}
+{"level":"info","message":"Retrieved all users","timestamp":"2025-07-21T09:29:19.787Z"}
+{"level":"info","message":"Retrieved all users","timestamp":"2025-07-21T09:29:21.776Z"}
+{"level":"info","message":"Retrieved all users","timestamp":"2025-07-21T09:29:24.205Z"}
+{"level":"info","message":"Retrieved all users","timestamp":"2025-07-21T09:30:44.706Z"}
+{"level":"info","message":"Retrieved all users","timestamp":"2025-07-21T09:30:46.389Z"}
+{"level":"info","message":"Retrieved all users","timestamp":"2025-07-21T09:30:50.642Z"}
+{"level":"info","message":"Retrieved all users","timestamp":"2025-07-21T09:30:54.647Z"}
+{"level":"info","message":"Retrieved all users","timestamp":"2025-07-21T09:31:07.606Z"}
+{"level":"info","message":"Retrieved all users","timestamp":"2025-07-21T09:32:15.775Z"}
+{"level":"info","message":"Retrieved all users","timestamp":"2025-07-21T09:32:56.890Z"}
+{"level":"info","message":"Retrieved all users","timestamp":"2025-07-21T09:32:58.132Z"}
+{"level":"info","message":"Retrieved all users","timestamp":"2025-07-21T09:33:02.264Z"}
+{"level":"info","message":"Retrieved all users","timestamp":"2025-07-21T09:33:05.478Z"}
+{"level":"info","message":"Retrieved all users","timestamp":"2025-07-21T09:33:07.699Z"}
+{"level":"info","message":"Retrieved all users","timestamp":"2025-07-21T09:33:11.623Z"}
+{"level":"info","message":"Retrieved all users","timestamp":"2025-07-21T09:33:16.915Z"}
+{"level":"info","message":"Retrieved all users","timestamp":"2025-07-21T09:33:18.841Z"}
+{"level":"info","message":"Retrieved all users","timestamp":"2025-07-21T09:33:30.541Z"}
+{"level":"info","message":"Retrieved all users","timestamp":"2025-07-21T09:40:42.390Z"}
+{"level":"info","message":"Retrieved all users","timestamp":"2025-07-21T09:40:44.998Z"}
+{"level":"info","message":"Retrieved all users","timestamp":"2025-07-21T09:40:47.759Z"}
+{"level":"info","message":"Retrieved all users","timestamp":"2025-07-21T09:40:50.627Z"}
+{"level":"info","message":"Retrieved all users","timestamp":"2025-07-21T09:41:32.319Z"}
+{"level":"info","message":"User logged in: vemireddybharathreddy90@gmail.com","timestamp":"2025-07-21T09:41:39.578Z"}
+{"level":"info","message":"Retrieved user: 3","timestamp":"2025-07-21T09:41:39.754Z"}
+{"level":"info","message":"User soft deleted: 3","timestamp":"2025-07-21T09:41:51.995Z"}
+{"level":"error","message":"Authentication error: jwt malformed","name":"JsonWebTokenError","stack":"JsonWebTokenError: jwt malformed\n    at module.exports [as verify] (C:\\Users\\asus\\Desktop\\FullStackAssignment\\backend\\node_modules\\jsonwebtoken\\verify.js:70:17)\n    at authenticate (C:\\Users\\asus\\Desktop\\FullStackAssignment\\backend\\middleware\\auth.js:12:25)\n    at Layer.handle [as handle_request] (C:\\Users\\asus\\Desktop\\FullStackAssignment\\backend\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at next (C:\\Users\\asus\\Desktop\\FullStackAssignment\\backend\\node_modules\\express\\lib\\router\\route.js:149:13)\n    at Route.dispatch (C:\\Users\\asus\\Desktop\\FullStackAssignment\\backend\\node_modules\\express\\lib\\router\\route.js:119:3)\n    at Layer.handle [as handle_request] (C:\\Users\\asus\\Desktop\\FullStackAssignment\\backend\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at C:\\Users\\asus\\Desktop\\FullStackAssignment\\backend\\node_modules\\express\\lib\\router\\index.js:284:15\n    at Function.process_params (C:\\Users\\asus\\Desktop\\FullStackAssignment\\backend\\node_modules\\express\\lib\\router\\index.js:346:12)\n    at next (C:\\Users\\asus\\Desktop\\FullStackAssignment\\backend\\node_modules\\express\\lib\\router\\index.js:280:10)\n    at Function.handle (C:\\Users\\asus\\Desktop\\FullStackAssignment\\backend\\node_modules\\express\\lib\\router\\index.js:175:3)","timestamp":"2025-07-21T09:41:52.014Z"}
+{"level":"info","message":"Retrieved all users","timestamp":"2025-07-21T09:41:55.212Z"}
+{"level":"error","message":"Invalid credentials","stack":"Error: Invalid credentials\n    at AuthService.login (C:\\Users\\asus\\Desktop\\FullStackAssignment\\backend\\services\\authService.js:11:13)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async C:\\Users\\asus\\Desktop\\FullStackAssignment\\backend\\routes\\auth.js:10:20","timestamp":"2025-07-21T09:41:58.878Z"}
+{"level":"info","message":"Retrieved all users","timestamp":"2025-07-21T09:44:36.547Z"}
+{"level":"info","message":"User logged in: sharat@gmail.com","timestamp":"2025-07-21T09:44:56.625Z"}
+{"level":"info","message":"Retrieved user: 5","timestamp":"2025-07-21T09:44:56.757Z"}
+{"level":"info","message":"User soft deleted: 5","timestamp":"2025-07-21T09:45:02.560Z"}
+{"level":"info","message":"User logged out: 5","timestamp":"2025-07-21T09:45:02.569Z"}
+{"level":"error","message":"Error fetching user: User not found","stack":"Error: User not found\n    at UserService.getUserById (C:\\Users\\asus\\Desktop\\FullStackAssignment\\backend\\services\\userService.js:34:15)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async C:\\Users\\asus\\Desktop\\FullStackAssignment\\backend\\routes\\users.js:27:18","timestamp":"2025-07-21T09:45:02.675Z"}
+{"level":"error","message":"User not found","stack":"Error: User not found\n    at UserService.getUserById (C:\\Users\\asus\\Desktop\\FullStackAssignment\\backend\\services\\userService.js:34:15)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async C:\\Users\\asus\\Desktop\\FullStackAssignment\\backend\\routes\\users.js:27:18","timestamp":"2025-07-21T09:45:02.676Z"}
+{"level":"error","message":"Authentication error: jwt malformed","name":"JsonWebTokenError","stack":"JsonWebTokenError: jwt malformed\n    at module.exports [as verify] (C:\\Users\\asus\\Desktop\\FullStackAssignment\\backend\\node_modules\\jsonwebtoken\\verify.js:70:17)\n    at authenticate (C:\\Users\\asus\\Desktop\\FullStackAssignment\\backend\\middleware\\auth.js:12:25)\n    at Layer.handle [as handle_request] (C:\\Users\\asus\\Desktop\\FullStackAssignment\\backend\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at next (C:\\Users\\asus\\Desktop\\FullStackAssignment\\backend\\node_modules\\express\\lib\\router\\route.js:149:13)\n    at Route.dispatch (C:\\Users\\asus\\Desktop\\FullStackAssignment\\backend\\node_modules\\express\\lib\\router\\route.js:119:3)\n    at Layer.handle [as handle_request] (C:\\Users\\asus\\Desktop\\FullStackAssignment\\backend\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at C:\\Users\\asus\\Desktop\\FullStackAssignment\\backend\\node_modules\\express\\lib\\router\\index.js:284:15\n    at Function.process_params (C:\\Users\\asus\\Desktop\\FullStackAssignment\\backend\\node_modules\\express\\lib\\router\\index.js:346:12)\n    at next (C:\\Users\\asus\\Desktop\\FullStackAssignment\\backend\\node_modules\\express\\lib\\router\\index.js:280:10)\n    at Function.handle (C:\\Users\\asus\\Desktop\\FullStackAssignment\\backend\\node_modules\\express\\lib\\router\\index.js:175:3)","timestamp":"2025-07-21T09:45:20.906Z"}
+{"level":"error","message":"Database query error: Duplicate entry 'vemireddybharathreddy90@gmail.com' for key 'users.email'","timestamp":"2025-07-21T09:45:38.351Z"}
+{"code":"ER_DUP_ENTRY","errno":1062,"level":"error","message":"Error creating user: Duplicate entry 'vemireddybharathreddy90@gmail.com' for key 'users.email'","sql":"INSERT INTO users (name, email, password, is_active, created_at, updated_at) VALUES ('Bharath Kumar Reddy Vemireddy', 'vemireddybharathreddy90@gmail.com', '$2a$10$pDFcje0TY2pB.x2Sh3W9BuSsy8tdMLQev6LUkQgO8kjnE2hj3hWa6', true, '2025-07-21 15:15:38.216', '2025-07-21 15:15:38.216')","sqlMessage":"Duplicate entry 'vemireddybharathreddy90@gmail.com' for key 'users.email'","sqlState":"23000","stack":"Error: Duplicate entry 'vemireddybharathreddy90@gmail.com' for key 'users.email'\n    at PromisePool.query (C:\\Users\\asus\\Desktop\\FullStackAssignment\\backend\\node_modules\\mysql2\\lib\\promise\\pool.js:36:22)\n    at QueryExecutor.executeQuery (C:\\Users\\asus\\Desktop\\FullStackAssignment\\backend\\utils\\queryExecutor.js:63:35)\n    at QueryExecutor.create (C:\\Users\\asus\\Desktop\\FullStackAssignment\\backend\\utils\\queryExecutor.js:81:31)\n    at User.create (C:\\Users\\asus\\Desktop\\FullStackAssignment\\backend\\models\\user.js:15:26)\n    at async UserService.createUser (C:\\Users\\asus\\Desktop\\FullStackAssignment\\backend\\services\\userService.js:7:18)\n    at async C:\\Users\\asus\\Desktop\\FullStackAssignment\\backend\\routes\\users.js:9:18","timestamp":"2025-07-21T09:45:38.352Z"}
+{"level":"error","message":"Duplicate entry 'vemireddybharathreddy90@gmail.com' for key 'users.email'","stack":"Error: Duplicate entry 'vemireddybharathreddy90@gmail.com' for key 'users.email'\n    at PromisePool.query (C:\\Users\\asus\\Desktop\\FullStackAssignment\\backend\\node_modules\\mysql2\\lib\\promise\\pool.js:36:22)\n    at QueryExecutor.executeQuery (C:\\Users\\asus\\Desktop\\FullStackAssignment\\backend\\utils\\queryExecutor.js:63:35)\n    at QueryExecutor.create (C:\\Users\\asus\\Desktop\\FullStackAssignment\\backend\\utils\\queryExecutor.js:81:31)\n    at User.create (C:\\Users\\asus\\Desktop\\FullStackAssignment\\backend\\models\\user.js:15:26)\n    at async UserService.createUser (C:\\Users\\asus\\Desktop\\FullStackAssignment\\backend\\services\\userService.js:7:18)\n    at async C:\\Users\\asus\\Desktop\\FullStackAssignment\\backend\\routes\\users.js:9:18","timestamp":"2025-07-21T09:45:38.353Z"}
+{"level":"info","message":"Retrieved all users","timestamp":"2025-07-21T09:46:17.490Z"}
+{"level":"error","message":"Invalid credentials","stack":"Error: Invalid credentials\n    at AuthService.login (C:\\Users\\asus\\Desktop\\FullStackAssignment\\backend\\services\\authService.js:16:13)\n    at async C:\\Users\\asus\\Desktop\\FullStackAssignment\\backend\\routes\\auth.js:10:20","timestamp":"2025-07-21T09:46:54.719Z"}
+{"level":"error","message":"Invalid credentials","stack":"Error: Invalid credentials\n    at AuthService.login (C:\\Users\\asus\\Desktop\\FullStackAssignment\\backend\\services\\authService.js:16:13)\n    at async C:\\Users\\asus\\Desktop\\FullStackAssignment\\backend\\routes\\auth.js:10:20","timestamp":"2025-07-21T09:47:00.838Z"}
+{"level":"error","message":"Invalid credentials","stack":"Error: Invalid credentials\n    at AuthService.login (C:\\Users\\asus\\Desktop\\FullStackAssignment\\backend\\services\\authService.js:16:13)\n    at async C:\\Users\\asus\\Desktop\\FullStackAssignment\\backend\\routes\\auth.js:10:20","timestamp":"2025-07-21T09:47:02.914Z"}
+{"level":"error","message":"Invalid credentials","stack":"Error: Invalid credentials\n    at AuthService.login (C:\\Users\\asus\\Desktop\\FullStackAssignment\\backend\\services\\authService.js:16:13)\n    at async C:\\Users\\asus\\Desktop\\FullStackAssignment\\backend\\routes\\auth.js:10:20","timestamp":"2025-07-21T09:47:20.493Z"}
+{"level":"error","message":"Invalid credentials","stack":"Error: Invalid credentials\n    at AuthService.login (C:\\Users\\asus\\Desktop\\FullStackAssignment\\backend\\services\\authService.js:16:13)\n    at async C:\\Users\\asus\\Desktop\\FullStackAssignment\\backend\\routes\\auth.js:10:20","timestamp":"2025-07-21T09:47:31.155Z"}
+{"level":"error","message":"Invalid credentials","stack":"Error: Invalid credentials\n    at AuthService.login (C:\\Users\\asus\\Desktop\\FullStackAssignment\\backend\\services\\authService.js:16:13)\n    at async C:\\Users\\asus\\Desktop\\FullStackAssignment\\backend\\routes\\auth.js:10:20","timestamp":"2025-07-21T09:47:32.758Z"}
+{"level":"error","message":"Invalid credentials","stack":"Error: Invalid credentials\n    at AuthService.login (C:\\Users\\asus\\Desktop\\FullStackAssignment\\backend\\services\\authService.js:16:13)\n    at async C:\\Users\\asus\\Desktop\\FullStackAssignment\\backend\\routes\\auth.js:10:20","timestamp":"2025-07-21T09:47:40.033Z"}
+{"level":"error","message":"Invalid credentials","stack":"Error: Invalid credentials\n    at AuthService.login (C:\\Users\\asus\\Desktop\\FullStackAssignment\\backend\\services\\authService.js:11:13)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async C:\\Users\\asus\\Desktop\\FullStackAssignment\\backend\\routes\\auth.js:10:20","timestamp":"2025-07-21T09:47:58.933Z"}
+{"level":"info","message":"Server running on port 3000, worker 17668","timestamp":"2025-07-21T09:49:23.843Z"}
+{"level":"info","message":"Retrieved all users","timestamp":"2025-07-21T09:50:35.946Z"}
+{"level":"info","message":"Retrieved all users","timestamp":"2025-07-21T09:50:36.481Z"}
+{"level":"info","message":"Retrieved all users","timestamp":"2025-07-21T09:52:03.102Z"}
+{"level":"info","message":"Server running on port 3000, worker 21764","timestamp":"2025-07-21T09:52:03.944Z"}
+{"level":"info","message":"Retrieved all users","timestamp":"2025-07-21T09:52:04.831Z"}
+{"level":"info","message":"Retrieved all users","timestamp":"2025-07-21T09:52:13.149Z"}
+{"level":"info","message":"Retrieved all users","timestamp":"2025-07-21T09:52:19.627Z"}
+{"level":"info","message":"Retrieved all users","timestamp":"2025-07-21T09:52:43.236Z"}
+{"level":"info","message":"User created: ram@gmail.com","timestamp":"2025-07-21T09:53:28.702Z"}
+{"level":"info","message":"User logged in: ram@gmail.com","timestamp":"2025-07-21T09:53:43.466Z"}
+{"level":"info","message":"Retrieved user: 9","timestamp":"2025-07-21T09:53:43.628Z"}
+{"level":"info","message":"Server running on port 3000, worker 21452","timestamp":"2025-07-21T09:53:49.456Z"}
+{"level":"info","message":"Retrieved all users","timestamp":"2025-07-21T09:53:50.292Z"}
+{"level":"info","message":"Retrieved user: 9","timestamp":"2025-07-21T09:53:50.304Z"}
+{"level":"info","message":"Retrieved all users","timestamp":"2025-07-21T09:54:52.815Z"}
+{"level":"info","message":"Retrieved user: 9","timestamp":"2025-07-21T09:54:52.877Z"}
+{"level":"info","message":"Retrieved user: 9","timestamp":"2025-07-21T09:54:54.732Z"}
+{"level":"info","message":"Retrieved all users","timestamp":"2025-07-21T09:54:54.736Z"}
+{"level":"info","message":"Retrieved all users","timestamp":"2025-07-21T09:55:13.021Z"}
+{"level":"info","message":"Retrieved all users","timestamp":"2025-07-21T09:55:49.171Z"}
+{"level":"info","message":"Retrieved user: 9","timestamp":"2025-07-21T09:55:49.173Z"}

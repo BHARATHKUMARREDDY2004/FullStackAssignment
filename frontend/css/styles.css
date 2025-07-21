@@ -40,6 +40,10 @@ body {
   width: 100%;
 }
 
+.form-container p {
+  color: #ffffff;
+}
+
 
 
 .form-group label {

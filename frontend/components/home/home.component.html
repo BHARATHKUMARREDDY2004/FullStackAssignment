@@ -2,129 +2,134 @@
 
   <div class="header">
     <h2>Welcome, {{ user.name }}</h2>
-    <button ng-click="logout()">Logout</button>
+    <div>
+      <button ng-click="logout()">Logout</button>
+      <button ng-click="deleteAccount()">Delete Account</button>
+    </div>
   </div>
 
   <section class="card">
     <h3>Create Task</h3>
     <div ng-show="error" class="error-message" ng-bind-html="error"></div>
     <form name="taskForm" novalidate>
-    <div class="form-grid">
-      <div class="form-group">
-        <label for="title">Title <span class="required-field">*</span></label>
-        <input type="text" id="title" name="title" ng-model="newTask.title" placeholder="Enter task title" required>
+      <div class="form-grid">
+        <div class="form-group">
+          <label for="title">Title <span class="required-field">*</span></label>
+          <input type="text" id="title" name="title" ng-model="newTask.title" placeholder="Enter task title" required>
+        </div>
+        <div class="form-group full-width">
+          <label for="description">Description</label>
+          <textarea id="description" name="description" ng-model="newTask.description"
+            placeholder="Enter task description"></textarea>
+        </div>
+        <div class="form-group">
+          <label for="priority">Priority <span class="required-field">*</span></label>
+          <select id="priority" name="priority" ng-model="newTask.priority" required>
+            <option value="low">Low</option>
+            <option value="medium">Medium</option>
+            <option value="high">High</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="due_date">Due Date <span class="required-field">*</span></label>
+          <input type="date" id="due_date" name="due_date" ng-model="newTask.due_date" required>
+        </div>
+        <div class="form-group full-width">
+          <button ng-click="createTask()" class="primary-btn">Create Task</button>
+        </div>
       </div>
-      <div class="form-group full-width">
-        <label for="description">Description</label>
-        <textarea id="description" name="description" ng-model="newTask.description" placeholder="Enter task description"></textarea>
-      </div>
-      <div class="form-group">
-        <label for="priority">Priority <span class="required-field">*</span></label>
-        <select id="priority" name="priority" ng-model="newTask.priority" required>
-          <option value="low">Low</option>
-          <option value="medium">Medium</option>
-          <option value="high">High</option>
-        </select>
-      </div>
-      <div class="form-group">
-        <label for="due_date">Due Date <span class="required-field">*</span></label>
-        <input type="date" id="due_date" name="due_date" ng-model="newTask.due_date" required>
-      </div>
-      <div class="form-group full-width">
-        <button ng-click="createTask()" class="primary-btn">Create Task</button>
-      </div>
-    </div>
     </form>
+</div>
+</section>
+
+
+<section class="card">
+  <div class="section-header">
+    <h3>Your Tasks</h3>
+    <div class="filters">
+      <select ng-model="filters.status" ng-change="applyFilters()">
+        <option value="all">All Status</option>
+        <option value="pending">Pending</option>
+        <option value="completed">Completed</option>
+      </select>
+      <select ng-model="filters.priority" ng-change="applyFilters()">
+        <option value="all">All Priority</option>
+        <option value="low">Low</option>
+        <option value="medium">Medium</option>
+        <option value="high">High</option>
+      </select>
+      <button ng-click="resetFilters()" class="reset-btn">Reset</button>
     </div>
-  </section>
+  </div>
 
+  <div ng-if="filteredTasks.length === 0" class="no-tasks">
+    <p>No tasks found</p>
+  </div>
 
-  <section class="card">
-    <div class="section-header">
-      <h3>Your Tasks</h3>
-      <div class="filters">
-        <select ng-model="filters.status" ng-change="applyFilters()">
-          <option value="all">All Status</option>
-          <option value="pending">Pending</option>
-          <option value="completed">Completed</option>
-        </select>
-        <select ng-model="filters.priority" ng-change="applyFilters()">
-          <option value="all">All Priority</option>
-          <option value="low">Low</option>
-          <option value="medium">Medium</option>
-          <option value="high">High</option>
-        </select>
-        <button ng-click="resetFilters()" class="reset-btn">Reset</button>
+  <div ng-repeat="task in filteredTasks" class="task-card" ng-class="'priority-' + task.priority">
+
+    <div ng-if="!task.editing">
+      <div class="task-header">
+        <h4>{{ task.title }}</h4>
+        <span class="status-label" ng-class="{'completed': task.is_completed, 'pending': !task.is_completed}">
+          {{ task.is_completed ? 'Completed' : 'Pending' }}
+        </span>
+      </div>
+      <p>{{ task.description }}</p>
+      <p>
+        <strong>Priority:</strong>
+        <span class="priority-badge {{ task.priority }}">{{ task.priority.charAt(0).toUpperCase() +
+          task.priority.slice(1) }}</span>
+      </p>
+      <p><strong>Due Date:</strong> {{ task.due_date | date:'shortDate' }}</p>
+      <div class="task-actions">
+        <button ng-click="startInlineEdit(task)">Edit</button>
+        <button ng-click="toggleTaskStatus(task)">
+          Mark as {{ task.is_completed ? 'Pending' : 'Completed' }}
+        </button>
+        <button ng-click="deleteTask(task.id)" class="danger-btn">Delete</button>
       </div>
     </div>
 
-    <div ng-if="filteredTasks.length === 0" class="no-tasks">
-      <p>No tasks found</p>
-    </div>
 
-    <div ng-repeat="task in filteredTasks" class="task-card" ng-class="'priority-' + task.priority">
-    
-      <div ng-if="!task.editing">
-        <div class="task-header">
-          <h4>{{ task.title }}</h4>
-          <span class="status-label" ng-class="{'completed': task.is_completed, 'pending': !task.is_completed}">
-            {{ task.is_completed ? 'Completed' : 'Pending' }}
-          </span>
+    <div ng-if="task.editing" class="edit-mode">
+      <div ng-show="editError" class="edit-error" ng-bind-html="editError"></div>
+      <div class="form-grid">
+        <div class="form-group full-width">
+          <label for="edit-title-{{task.id}}" class="edit-label">Title</label>
+          <input type="text" id="edit-title-{{task.id}}" ng-model="task.editData.title" required>
         </div>
-        <p>{{ task.description }}</p>
-        <p>
-          <strong>Priority:</strong> 
-          <span class="priority-badge {{ task.priority }}">{{ task.priority.charAt(0).toUpperCase() + task.priority.slice(1) }}</span>
-        </p>
-        <p><strong>Due Date:</strong> {{ task.due_date | date:'shortDate' }}</p>
-        <div class="task-actions">
-          <button ng-click="startInlineEdit(task)">Edit</button>
-          <button ng-click="toggleTaskStatus(task)">
-            Mark as {{ task.is_completed ? 'Pending' : 'Completed' }}
-          </button>
-          <button ng-click="deleteTask(task.id)" class="danger-btn">Delete</button>
+        <div class="form-group full-width">
+          <label for="edit-desc-{{task.id}}" class="edit-label">Description</label>
+          <textarea id="edit-desc-{{task.id}}" ng-model="task.editData.description"></textarea>
         </div>
-      </div>
-
-  
-      <div ng-if="task.editing" class="edit-mode">
-        <div ng-show="editError" class="edit-error" ng-bind-html="editError"></div>
-        <div class="form-grid">
-          <div class="form-group full-width">
-            <label for="edit-title-{{task.id}}" class="edit-label">Title</label>
-            <input type="text" id="edit-title-{{task.id}}" ng-model="task.editData.title" required>
-          </div>
-          <div class="form-group full-width">
-            <label for="edit-desc-{{task.id}}" class="edit-label">Description</label>
-            <textarea id="edit-desc-{{task.id}}" ng-model="task.editData.description"></textarea>
-          </div>
-          <div class="form-group">
-            <label for="edit-priority-{{task.id}}" class="edit-label">Priority</label>
-            <select id="edit-priority-{{task.id}}" ng-model="task.editData.priority" required>
-              <option value="low">Low</option>
-              <option value="medium">Medium</option>
-              <option value="high">High</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label for="edit-duedate-{{task.id}}" class="edit-label">Due Date</label>
-            <input type="date" id="edit-duedate-{{task.id}}" ng-model="task.editData.due_date">
-          </div>
-          <div class="form-group">
-            <label for="edit-status-{{task.id}}" class="edit-label">Status</label>
-            <select id="edit-status-{{task.id}}" ng-model="task.editData.is_completed">
-              <option ng-value="false">Pending</option>
-              <option ng-value="true">Completed</option>
-            </select>
-          </div>
-          <div class="form-group full-width">
-            <div class="task-edit-actions">
-              <button ng-click="saveInlineEdit(task)" class="primary-btn">Save</button>
-              <button ng-click="cancelInlineEdit(task)" class="reset-btn">Cancel</button>
-            </div>
+        <div class="form-group">
+          <label for="edit-priority-{{task.id}}" class="edit-label">Priority</label>
+          <select id="edit-priority-{{task.id}}" ng-model="task.editData.priority" required>
+            <option value="low">Low</option>
+            <option value="medium">Medium</option>
+            <option value="high">High</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="edit-duedate-{{task.id}}" class="edit-label">Due Date</label>
+          <input type="date" id="edit-duedate-{{task.id}}" ng-model="task.editData.due_date">
+        </div>
+        <div class="form-group">
+          <label for="edit-status-{{task.id}}" class="edit-label">Status</label>
+          <select id="edit-status-{{task.id}}" ng-model="task.editData.is_completed">
+            <option ng-value="false">Pending</option>
+            <option ng-value="true">Completed</option>
+          </select>
+        </div>
+        <div class="form-group full-width">
+          <div class="task-edit-actions">
+            <button ng-click="saveInlineEdit(task)" class="primary-btn">Save</button>
+            <button ng-click="cancelInlineEdit(task)" class="reset-btn">Cancel</button>
           </div>
         </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 </div>

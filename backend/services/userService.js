@@ -13,6 +13,20 @@ class UserService {
     }
   }
 
+  static async getAllUsers() {
+    try {
+      const users = await User.findAll();
+      logger.info('Retrieved all users');
+      return users.map(user => {
+        const { password, ...userWithoutPassword } = user;
+        return userWithoutPassword;
+      });
+    } catch (error) {
+      logger.error('Error fetching users:', error);
+      throw error;
+    }
+  }
+
   static async getUserById(id) {
     try {
       const user = await User.findById(id);

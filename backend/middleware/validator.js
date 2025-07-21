@@ -2,7 +2,8 @@
 const validate = (schema) => (req, res, next) => {
   const { errors, valid } = schema(req.body);
   if (!valid) {
-    return res.status(400).json({ errors });
+    console.log('Validation failed:', errors, 'Request body:', req.body);
+    return res.status(400).json({ errors, message: errors.join(' ') });
   }
   next();
 };

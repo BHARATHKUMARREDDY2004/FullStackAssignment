@@ -15,6 +15,10 @@ class User {
     return QueryExecutor.create('users', data);
   }
 
+  static async findAll() {
+    return QueryExecutor.findAll('users');
+  }
+
   static async findByEmail(email) {
     return QueryExecutor.findOne('users', { email, is_active: true });
   }
